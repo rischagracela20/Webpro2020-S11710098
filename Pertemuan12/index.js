@@ -28,3 +28,25 @@
 
 //EXECISE
 //Convert to ES6 Syntax
+function yearUntilRetirement(year, firstName){
+    var age = 28;
+    var retirement = 65 - age;
+    if(retirement > 0){
+        console.log(firstName + " retired in " + retirement + " years");
+    }else{
+        console.log(firstName + " is already retired.");
+    }
+}
+
+//EXERCISE ANSWER
+const yearUntilRetirement = (birthYear = 1999, currentYear = 2020, firstName) => {
+    let age = currentYear - birthYear;
+    let retirement = 65 - age;
+    if(retirement > 0 ){
+        console.log(`${firstName} retired in ${retirement} years`);
+    }else{
+        console.log(`${firstName} is already retired.`);
+    }
+}
+
+console.log(yearUntilRetirement(1999, 2020, "Rischa"));
